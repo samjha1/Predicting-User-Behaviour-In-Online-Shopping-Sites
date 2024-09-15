@@ -1,0 +1,12 @@
+@Entity
+public class UserAction {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String action;
+    private Long productId;
+    private LocalDateTime timestamp;
+
+    // Getters and Setters
+}
