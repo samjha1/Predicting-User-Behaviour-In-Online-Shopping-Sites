@@ -1,0 +1,12 @@
+@RestController
+@RequestMapping("/api")
+public class UserActionController {
+
+    @PostMapping("/logAction")
+    public ResponseEntity<String> logUserAction(@RequestBody UserAction userAction) {
+        // Log the action to the database
+        // For example: save to MySQL or MongoDB
+        userActionService.save(userAction);
+        return new ResponseEntity<>("Action logged successfully", HttpStatus.OK);
+    }
+}
