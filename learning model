@@ -1,0 +1,4 @@
+// Call Python ML service
+RestTemplate restTemplate = new RestTemplate();
+String mlApiUrl = "http://ml-service-url/predict";
+PredictionResponse prediction = restTemplate.postForObject(mlApiUrl, userAction, PredictionResponse.class);
